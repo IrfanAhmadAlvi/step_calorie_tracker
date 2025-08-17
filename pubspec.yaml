@@ -1,6 +1,6 @@
 name: step_calorie_tracker
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -15,11 +15,21 @@ dependencies:
   pedometer: ^4.0.1
   permission_handler: ^11.3.1
   wakelock_plus: ^1.2.8
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1   # ✅ added here
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false  # --- CHANGE THIS LINE ---
+  image_path: "assets/icon/app_icon.png"
+  remove_alpha_ios: true
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/icon/app_icon.png # ✅ also declare your asset
